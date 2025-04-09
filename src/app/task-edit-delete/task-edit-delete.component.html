@@ -1,1 +1,24 @@
-<p>task-edit-delete works!</p>
+<form>
+    <div>
+      <label for="title">Task Title</label>
+      <input id="title" formControlName="title" />
+      <div ngIf="title.invalid && (title.dirty || title.touched)" class="error">
+        Task title is required.
+      </div>
+    </div>
+  
+    <div>
+      <label for="description">Task Description</label>
+      <textarea id="description" formControlName="description"></textarea>
+      <div ngIf="description.invalid && (description.dirty || description.touched)" class="error">
+        Task description is required.
+      </div>
+    </div>
+  
+    <div>
+      <button type="submit">
+        Task
+      </button>
+    </div>
+  </form>
+  
